@@ -21,13 +21,12 @@ class SubCatalog(models.Model):
 class Product(models.Model):
     category = models.ForeignKey(SubCatalog,verbose_name="SubCatalog",on_delete=models.CASCADE)
     name = models.CharField(max_length=128)
-    img=models.ImageField()
-    id =  models.UUIDField(primary_key=True, default=uuid.uuid4)
+    img=models.ImageField(null=True, blank=True)
     price =  models.FloatField()
     rating=models.FloatField(validators=[MinValueValidator(0), MaxValueValidator(5)])
     added_to_cart = models.BooleanField(default=False)
     def __str__(self) -> str:
-        return (f"{self.name} - {self.id}")
+        return (f"{self.name} - {self.product_id}")
 
 class Cart(models.Model):
     created_at=models.DateTimeField(auto_now_add=True,null=True)
