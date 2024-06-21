@@ -12,7 +12,7 @@
     }
 </style>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand" href="/">OnStore </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -26,7 +26,7 @@
                 </li>
                 {%endif%}
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <a class="nav-link active" aria-current="page" href="/">Home</a>
                 </li> 
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="/products">Products</a>
@@ -39,7 +39,7 @@
                         <li><a class="dropdown-item" href="#">Household</a></li>
                         <li><a class="dropdown-item" href="#">Automobiles</a></li>
                         <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#">Others</a></li>
+                        <li><a class="dropdown-item" href="/categories">Others</a></li>
                     </ul>
                     <li class="nav-item">
                       <a class="nav-link" href="/contact">Contact Us</a>
@@ -50,11 +50,14 @@
                   <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">My profile</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">My cart</a>
+                    <a class="nav-link" href="/mycart" tabindex="-1" aria-disabled="true">My cart</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="/account/logout" tabindex="-1" aria-disabled="true">Logout</a>
                 </li>
                 {%else%}
                 <li class="nav-item">
-                    <a class="nav-link" href="account/login">Sign in</a>
+                    <a class="nav-link" href="/account/login">Sign in</a>
                 </li>
                 {%endif%}
             </ul>
