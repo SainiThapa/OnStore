@@ -1,0 +1,78 @@
+/* Add some basic styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: left;
+    margin: 20px 10px;
+}
+
+.add-cart{
+    width: auto;
+    text-align: center;
+}
+.add-cart button{
+    width: 50%;
+}
+
+
+.product-container {
+    display: flex;
+    justify-content: left;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.product-content {
+    display: flex;
+    justify-content: left;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1200px;
+    /* margin: 0 auto; */
+    padding: 0 20px;
+}
+
+.product-card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    overflow: hidden;
+    width: calc(25% - 20px); /* 3 cards per row with 20px gap */
+    margin-bottom: 20px;
+    transition: transform 0.3s;
+}
+
+.product-card img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.product-card p {
+    padding: 15px;
+    margin: 0;
+    text-align: center;
+}
+
+/* Add hover effect */
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .product-card {
+        width: calc(50% - 20px); /* 2 cards per row with 20px gap */
+    }
+}
+
+@media (max-width: 768px) {
+    .product-card {
+        width: 100%; /* 1 card per row */
+    }
+}

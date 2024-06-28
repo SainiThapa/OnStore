@@ -1,15 +1,70 @@
-
+{%load static%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home page</title>
+    <link rel="stylesheet" href="{%static 'css/style.css'%}">
 </head>
 <body>
     {%include "base.html"%}
 
-    <h1>All Products</h1>
-    <p>This is the products page.</p>
+    <h1>Most Selling Products</h1>
+    <div class="product-container">
+        <div class="product-content">
+            <div class="product-card">
+                <img src="{%static 'img/card-img.webp'%}" alt="">
+                <p>This is the products page.</p>
+            </div>
+
+            <div class="product-card">
+                <img src="{%static 'img/card-img.webp'%}" alt="">
+                <p>This is the products page.</p>
+            </div>
+        </div>
+    </div>
+
+    <h1>Newly Arrived Products</h1>
+    <div class="product-container">
+        <div class="product-content">
+            <div class="product-card">
+                <img src="{%static 'img/card-img.webp'%}" alt="card">
+                <p>This is the products page.</p>
+                <div class="add-cart"><button class="btn btn-outline-success">Add to cart</button></div>
+            </div>
+            <div class="product-card">
+                <img src="{%static 'img/card-img.webp'%}" alt="">
+                <p>This is the products page.</p>
+            </div>
+            <div class="product-card">
+                <img src="{%static 'img/card-img.webp'%}" alt="">
+                <p>This is the products page.</p>
+            </div>
+            <div class="product-card">
+                <img src="{%static 'img/card-img.webp'%}" alt="">
+                <p>This is the products page.</p>
+            </div>
+            <div class="product-card">
+                <img src="{%static 'img/card-img.webp'%}" alt="">
+                <p>This is the products page.</p>
+            </div>
+        </div>
+    </div>
+
+    <h1>Summer Time sales</h1>
+    <div class="product-container">
+        <div class="product-content">
+            <div class="product-card">
+                <img src="{%static 'img/card-img.webp'%}" alt="">
+                <p>This is the products page.</p>
+            </div>
+
+            <div class="product-card">
+                <img src="{%static 'img/card-img.webp'%}" alt="">
+                <p>This is the products page.</p>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
